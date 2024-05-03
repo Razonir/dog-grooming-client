@@ -1,0 +1,83 @@
+.login-page {
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden;
+
+    h1 {
+        padding-top: 30px;
+        font-size: 50px;
+        animation: fadeUp 1s forwards;
+        filter: drop-shadow(0 3px 3px rgba(41, 41, 158, 0.3));
+    }
+
+    .login-bottom {
+        animation: fadeFromDown 1s forwards;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+
+        img {
+            max-width: 100%;
+            max-height: 200px;
+            width: fit-content;
+            height: auto;
+            margin-bottom: -20px;
+            animation: fadeFromDown 1s 0.3s forwards;
+            z-index: -1;
+            opacity: 0;
+            transform: translateY(100%);
+        }
+
+        .login-card {
+            background-color: white;
+            padding: 20px 0 130px 0;
+            max-width: 100%;
+            width: 400px;
+            border-radius: 40px 40px 0 0;
+            box-shadow: (0 -7px 50px rgba(41, 41, 158, 0.1));
+            animation: fadeFromDown 1s forwards;
+            form {
+                margin-bottom: 30px;
+            }
+
+            .signup {
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        scale: 0.9;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+}
+
+@keyframes fadeFromDown {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+}

@@ -1,0 +1,80 @@
+.home-page {
+    background: linear-gradient(0deg, #82d4ec, #84d4ed);
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .content {
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+
+        h1 {
+            padding-top: 30px;
+            font-size: 50px;
+            animation: fadeUp 1s forwards;
+            filter: drop-shadow(0 3px 3px rgba(41, 41, 158, 0.3));
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 16px;
+            max-width: 80%;
+            margin: 0 auto 20px;
+            animation: fadeUp 1s 0.4s forwards;
+            scale: 0.9;
+            opacity: 0;
+            transform: translateY(-20px);
+            filter: drop-shadow(0 3px 3px rgba(41, 41, 158, 0.3));
+        }
+
+        .button {
+            text-decoration: none;
+            width: 300px;
+            max-width: 90%;
+            text-align: center;
+            margin: 0 auto;
+            padding: 13px;
+            background: white;
+            border-radius: 25px;
+            font-weight: bold;
+            color: black;
+            animation: fadeUp 1s forwards;
+
+            box-shadow: (0 7px 12px rgba(41, 41, 158, 0.2));
+        }
+
+        .signup {
+            font-weight: bold;
+            color: #0092c5;
+        }
+
+        .login {
+            background: #0092c5;
+            color: white;
+        }
+
+    }
+    img {
+        width: 50%;
+        max-width: 200px;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        scale: 0.9;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+}
